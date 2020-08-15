@@ -35,7 +35,7 @@ namespace SezzleCalculator.Controllers
             if (isSocketRequest)
             {
                 WebSocket webSocket = await context.WebSockets.AcceptWebSocketAsync();
-                await ListenForEvents(context, webSocket);
+                await ListenForEvents(webSocket);
             }
             else
             {
@@ -43,7 +43,7 @@ namespace SezzleCalculator.Controllers
             }
         }
 
-        private async Task ListenForEvents(HttpContext context, WebSocket webSocket)
+        private async Task ListenForEvents(WebSocket webSocket)
         {
             var lastIndexSentToClient = 0; // represents that highest calculation index we have sent to the client
 
