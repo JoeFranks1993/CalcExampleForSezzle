@@ -1,4 +1,5 @@
 ﻿var isDisplayingResult = false;
+var webSocket;
 
 function CalcButtonClickEventHandler(val) {
     if (document.getElementById("calc_display").innerHTML.length >= 25) {
@@ -63,12 +64,15 @@ function AppendRowToHistoryTable(data) {
 
     // configure web sockets to listen for new clac history objects from the server.
     var getWebSocketMessages = function (onMessageReceived) {
-        var url = `wss://${location.host}/WebSocket`
-        console.log('url is: ' + url);
+        var url = `wss://${location.host}/WebSocket`;
 
-        var webSocket = new WebSocket(url);
+        webSocket = new WebSocket(url);
 
         webSocket.onmessage = onMessageReceived;
+    };
+
+    window.onbeforeunload = function () { // close the web socket if the page is refreshed
+        webSocket.close();
     };
 
     getWebSocketMessages(function (result) {
