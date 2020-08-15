@@ -64,6 +64,7 @@ namespace SezzleCalculator.Controllers
                         await webSocket.SendAsync(arraySegment, WebSocketMessageType.Text, true, CancellationToken.None);
                     }
                 }
+                await Task.Delay(500); 
             }
         }
     }
