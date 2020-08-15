@@ -1,0 +1,59 @@
+﻿body {
+    background-color: darkseagreen;
+}
+
+.parent {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.center {
+    background-color: #FFFF00;
+}
+
+.calc_button {
+    width: 100px;
+    height: 50px;
+    margin-top: 1px;
+    font-weight: bold;
+}
+
+#calc_history {
+    float: right;
+    vertical-align: top;
+    position: absolute;
+    top: 50px;
+    font-weight: bold;
+}
+
+#calc {
+    float: left;
+    border-style: double;
+    background-color: dimgrey;
+}
+
+#calc_display {
+    font-size: x-large;
+    height: 30px;
+    font-weight: bold;
+    text-align: center;
+    background-color: lightgray;
+}
+
+#equals_button {
+    background-color: orange;
+    float: right;
+}
+
+#clear_button {
+    background-color: indianred;
+}
+
+#calc_history_title {
+    vertical-align: top;
+    position: absolute;
+    top: 0px;
+}

@@ -1,0 +1,48 @@
+﻿@{
+    Layout = "_Layout";
+}
+
+<div class="parent">
+    <div class="center">
+        <div id="calc">
+            <div id="calc_display"></div>
+            <div id="calc_controls">
+                <div class="row">
+                    <input class="calc_button" type="button" value="7" onclick="CalcButtonClickEventHandler(this.value)">
+                    <input class="calc_button" type="button" value="8" onclick="CalcButtonClickEventHandler(this.value)">
+                    <input class="calc_button" type="button" value="9" onclick="CalcButtonClickEventHandler(this.value)">
+                    <input class="calc_button" type="button" value="/" onclick="CalcButtonClickEventHandler(this.value)">
+                </div>
+                <div class="row">
+                    <input class="calc_button" type="button" value="4" onclick="CalcButtonClickEventHandler(this.value)">
+                    <input class="calc_button" type="button" value="5" onclick="CalcButtonClickEventHandler(this.value)">
+                    <input class="calc_button" type="button" value="6" onclick="CalcButtonClickEventHandler(this.value)">
+                    <input class="calc_button" type="button" value="*" onclick="CalcButtonClickEventHandler(this.value)">
+                </div>
+                <div class="row">
+                    <input class="calc_button" type="button" value="1" onclick="CalcButtonClickEventHandler(this.value)">
+                    <input class="calc_button" type="button" value="2" onclick="CalcButtonClickEventHandler(this.value)">
+                    <input class="calc_button" type="button" value="3" onclick="CalcButtonClickEventHandler(this.value)">
+                    <input class="calc_button" type="button" value="-" onclick="CalcButtonClickEventHandler(this.value)">
+                </div>
+                <div class="row">
+                    <input class="calc_button" type="button" value="0" onclick="CalcButtonClickEventHandler(this.value)">
+                    <input class="calc_button" type="button" value="." onclick="CalcButtonClickEventHandler(this.value)">
+                    <input class="calc_button" type="button" value="+" onclick="CalcButtonClickEventHandler(this.value)">
+                    <input class="calc_button" id="clear_button" type="button" value="C" onclick="ClearInput()">
+                    
+                </div>
+                <div class="row">
+                    <input class="calc_button" type="button" value="(" onclick="CalcButtonClickEventHandler(this.value)">
+                    <input class="calc_button" type="button" value=")" onclick="CalcButtonClickEventHandler(this.value)">
+                    <input class="calc_button" id="equals_button" type="button" value="=" onclick="EqualsButtonEventHandler()">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="history_container">
+        <h2 id="calc_history_title">Calculation History</h2>
+        <table id="calc_history"></table>
+    </div>
+</div>
+
