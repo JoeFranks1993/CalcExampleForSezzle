@@ -1,0 +1,3 @@
+This is a single page calculator application built using standard JS, HTML and CSS on the front end. 
+Supported via a .net core api to handle, resolve and respond to equation input from the front end. 
+Changes made to the repository while sessions are active will be pushed out to connected clients via websockets. 
